@@ -64,12 +64,51 @@ def main(folder_path):
     for file in scan.png_files:
         hande_file(file, folder_path, "PNG")
 
+    for file in scan.svg_files:
+        hande_file(file, folder_path, "SVG")
+
+    for file in scan.avi_files:
+        hande_file(file, folder_path, "AVI")    
+
+    for file in scan.mp4_files:
+        hande_file(file, folder_path, "MP4")
+
+    for file in scan.mov_files:
+        hande_file(file, folder_path, "MOV")
+
+    for file in scan.mkv_files:
+        hande_file(file, folder_path, "MKV")
+
+    for file in scan.doc_files:
+        hande_file(file, folder_path, "DOC")
+
     for file in scan.txt_files:
         hande_file(file, folder_path, "TXT")
 
     for file in scan.docx_files:
         hande_file(file, folder_path, "DOCX")
+        
+    for file in scan.xlsx_files:
+        hande_file(file, folder_path, "XLSX")
 
+    for file in scan.pdf_files:
+        hande_file(file, folder_path, "PDF")
+
+    for file in scan.pptx_files:
+        hande_file(file, folder_path, "PPTX")
+
+    for file in scan.mp3_files:
+        hande_file(file, folder_path, "MP3")
+
+    for file in scan.ogg_files:
+        hande_file(file, folder_path, "OGG")
+                
+    for file in scan.wav_files:
+        hande_file(file, folder_path, "WAV")
+        
+    for file in scan.amr_files:
+        hande_file(file, folder_path, "AMR")
+        
     for file in scan.others:
         hande_file(file, folder_path, "OTHERS")
 

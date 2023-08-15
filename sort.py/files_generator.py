@@ -20,15 +20,23 @@ def generate_text_files(path):
 
 
 def generate_archive_files(path):
-    archive = ('ZIP', 'GZTAR', 'TAR')
+    archive = ('ZIP', 'GZ', 'TAR')
     shutil.make_archive(f"{path}/{get_random_filename()}", f'{choice(archive).lower()}', path)
 
 
 def generate_image(path):
-    images = ('JPEG', 'PNG', 'JPG')
+    images = ('JPEG', 'PNG', 'JPG', 'SVG')
     image_array = numpy.random.rand(100, 100, 3) * 255
     image = Image.fromarray(image_array.astype('uint8'))
     image.save(f"{path}/{get_random_filename()}.{choice(images).lower()}")
+
+def generate_video_files(path):
+    video_files = ('AVI', 'MP4', 'MOV', 'MKV')
+    video_files.save(f"{path}/{get_random_filename()}.{choice(video_files).lower()}")
+
+def genetate_music(path):
+    music = ('MP3', 'OGG', 'WAV', 'AMR')
+    music.save(f"{path}/{get_random_filename()}.{choice(music).lower()}")
 
 
 def generate_folders(path):
@@ -45,7 +53,7 @@ def generate_folder_forest(path):
 
 def generate_random_files(path):
     for i in range(3, randint(5, 7)):
-        function_list = [generate_text_files, generate_archive_files, generate_image]
+        function_list = [generate_text_files, generate_archive_files, generate_image, genetate_music, generate_video_files]
         choice(function_list)(path)
 
 
